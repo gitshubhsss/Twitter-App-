@@ -1,0 +1,32 @@
+.edit-text{
+    text-align: start;
+    height: auto;
+    height: 15REM;    
+}
+.twit-user{
+    display: flex;
+   
+}
+.twit-tick{
+    margin-top: 0.1rem;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 10rem;
+}
+.edit-post-btn{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+.edit-btn{
+    padding: 0.4rem 1rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #3b7bf6;
+
+}

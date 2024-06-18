@@ -1,26 +1,55 @@
-.edit-text{
+/* Existing styles */
+.edit-text {
     text-align: start;
-    height: auto;
-    height: 15REM;    
+    height: 15rem;
+    width: 100%; /* Ensure it takes full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 1rem; /* Add padding for better text positioning */
 }
-.twit-user{
+
+/* Container styles for responsiveness */
+.container {
     display: flex;
-   
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    margin: 1rem; /* Adjust margin for smaller screens */
 }
-.twit-tick{
-    margin-top: 0.1rem;
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Default to row layout on medium to large screens */
+        margin: 2rem 10rem; /* Default margin */
+    }
 }
-.container{
-    display: flex;
-    justify-content: space-between;
-    margin: 2rem 10rem;
+
+/* Ensure textarea content starts from the beginning */
+textarea::placeholder {
+    text-align: start;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
-.edit-post-btn{
+
+/* Additional responsive adjustments */
+.profile-menu,
+.posts-menu {
+    width: 100%; /* Full width on smaller screens */
+}
+
+@media (min-width: 768px) {
+    .profile-menu {
+        width: 30%; /* Adjust width for larger screens */
+    }
+    .posts-menu {
+        width: 70%; /* Increase width for larger screens */
+    }
+}
+
+.edit-post-btn {
     display: flex;
     justify-content: flex-end;
     margin-top: 1rem;
 }
-.edit-btn{
+
+.edit-btn {
     padding: 0.4rem 1rem;
     color: white;
     border: none;
@@ -28,5 +57,25 @@
     font-weight: 600;
     cursor: pointer;
     background-color: #3b7bf6;
+}
 
+/* Make view-profile-btn responsive */
+.view-profile-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3b7bf6;
+    color: white;
+    font-weight: 600;
+    max-width: 200px; /* Limit the maximum width */
+    width: 100%; /* Full width on smaller screens */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+@media (min-width: 768px) {
+    .view-profile-btn {
+        width: auto; /* Auto width for larger screens */
+    }
 }

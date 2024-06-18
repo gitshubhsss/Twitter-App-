@@ -52,7 +52,7 @@
                             </div>
                         </div>
                         <div class="twit-text-section">
-                            <form method="post" action="/profile/<%= post.id %>?_method=PATCH">
+                            <form method="post" action="/profile/<%= post._id %>?_method=PATCH">
                                 <textarea  class="edit-text"  name="content" id="">
                                 <%= post.content %>
                             </textarea>
@@ -68,6 +68,14 @@
     </div>
     <script src="https://kit.fontawesome.com/0ad2f85ce2.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const textarea = document.querySelector('.edit-text');
+            if (textarea) {
+                textarea.value = textarea.value.trim();
+            }
+        });
+    </script>
 </body>
 
 </html>

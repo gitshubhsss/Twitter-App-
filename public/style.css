@@ -216,3 +216,67 @@ body {
     font-size: 1.3rem;
 }
 
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        padding: 1rem 2rem;
+    }
+
+    .profile-sec {
+        position: static;
+        margin-bottom: 2rem;
+    }
+
+    .posts-menu {
+        margin-left: 0;
+    }
+
+    .post-nav {
+        width: 100%;
+    }
+
+    .posts {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .view-profile-btn, .follow-bt {
+        width: 100%;
+    }
+
+    .twit-text-section {
+        margin: 1rem 0;
+    }
+
+    .new-twit-btn {
+        width: 100%;
+        text-align: center;
+    }
+    .twit-text-section{
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .twit-nav-info-1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .twit-user {
+        padding-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .twit-text-section textarea {
+        font-size: 16px;
+    }
+    .follow-bt{
+        display: none;
+    }
+}
